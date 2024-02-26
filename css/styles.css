@@ -1,0 +1,1035 @@
+
+/* Стилизация навигационной панели */
+.navbar.navbar-light {
+    background-color: #1C1A16 !important;
+    height: 75px;
+    align-items: center;
+}
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand, .navbar-toggler-icon {
+    color: #FFFFFF !important;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.navbar-light .navbar-toggler-icon {
+    filter: invert(100%);
+}
+
+/* Стилизация элементов навигационного меню */
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand {
+    color: #FFFFFF !important;
+    font-family: 'Inter', regular;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.navbar .nav-link{
+    text-decoration: none;
+}
+
+
+.navbar-nav .nav-link:hover {
+    color: #F7B70B !important; /* Цвет при наведении */
+}
+
+
+
+/* Стилизация body и фонового изображения */
+body::before {
+    content: '';
+    background-image: url('../img/img.png');
+    background-color: #161410;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 50px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (max-width: 450px) {
+    body::before {
+        background-repeat: repeat-y;
+    }
+}
+
+/* Медиа-запросы для адаптивности */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        margin-right: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Медиа-запрос для уменьшения расстояния между пунктами меню */
+@media (max-width: 1200px) {
+    .navbar-light .navbar-nav .nav-link {
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Подключение шрифта Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+/* Стилизация логотипа и контейнера бренда */
+.navbar-brand .brand-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Изменение фона бокового меню */
+.offcanvas {
+    background-color: #333; /* Темно-серый цвет фона */
+}
+
+/* Изменение цвета текста в боковом меню */
+.offcanvas-header,
+.offcanvas-body {
+    color: #fff; /* Белый цвет текста */
+}
+
+/* Изменение цвета ссылок в боковом меню */
+.offcanvas a {
+    color: #4DB8FF; /* Светло-голубой цвет ссылок */
+}
+
+.offcanvas {
+    width: 250px;
+}
+
+/* Изменение цвета кнопки закрытия */
+.offcanvas .btn-close {
+    filter: invert(1); /* Белый цвет кнопки закрытия */
+}
+
+.list-unstyled li {
+    margin-bottom: 1px; /* или любой другой размер отступа, который вам нужен */
+    color: #FFFFFF; /* Белый цвет текста элементов списка */
+    position: relative; /* для позиционирования псевдоэлемента с маркером */
+}
+
+.list-unstyled li::before {
+    content: '•'; /* маркер списка */
+    color: #F7B70B; /* желтый цвет маркера */
+    font-size: 20px; /* размер маркера */
+    position: absolute; /* позволяет позиционировать относительно родителя */
+    left: -0.9em !important; /* смещаем маркер влево на расстояние одного символа */
+    top: 0; /* смещаем маркер вверх к верхнему краю элемента списка */
+}
+
+.list-unstyled{
+    padding-left: 15px;
+}
+
+
+
+.image-container {
+    position: relative; /* Для абсолютного позиционирования свечения относительно этого контейнера */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Центрирование свечения */
+    background: #FDEDCF;
+    mix-blend-mode: normal;
+    opacity: 0.65;
+    filter: blur(150px);
+    border-radius: 50%; /* Делаем круг */
+    z-index: -1; /* Свечение под изображением */
+}
+
+.image-container img {
+    position: relative;
+    z-index: 1; /* Убедитесь, что изображение над свечением */
+    max-width: 400px; /* Максимальная ширина изображения */
+}
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Kreadon:wght@500&display=swap');*/
+
+
+@font-face {
+    font-family: 'Kreadon';
+    src: local('Kreadon'), url('../txt/Kreadon-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.custom-heading {
+    font-family: 'Kreadon', light; /* Используйте 'Kreon', если medium вес имеет значение 500 */
+    font-weight: 500; /* Medium вес шрифта, если 'medium' соответствует 500 */
+    color: #F7B70B; /* Цвет текста */
+    text-align: left; /* Выравнивание текста по правому краю */
+    margin-left: 295px;
+}
+
+@media (max-width: 450px) {
+    .custom-heading {
+        text-align: right;
+        margin-left: 0px;
+    }
+}
+
+.custom-title,
+.custom-description {
+    font-family: 'Kreadon', sans-serif;
+    color: #FFFFFF; /* Белый цвет текста */
+}
+
+.custom-title {
+    font-weight: 500; /* Medium вес шрифта, если 'medium' соответствует 500 */
+    /* Другие стили для заголовка, если они нужны */
+}
+
+
+.surname,
+.name {
+    display: block; /* Это заставит имя и фамилию отображаться на разных строках */
+    font-family: 'Kreadon', sans-serif; /* Используйте нужное название шрифта */
+    color: #FFFFFF; /* Белый цвет текста */
+}
+
+.surname {
+    font-size: 100px; /* Увеличенный размер шрифта для фамилии */
+    font-weight: 500; /* Medium вес шрифта */
+}
+
+.name {
+    font-size: 50px; /* Меньший размер шрифта для имени и отчества */
+    font-weight: 400; /* Обычный вес шрифта */
+}
+
+.surname + .name{
+    margin-top: -30px; /* Уменьшаем отступ сверху для элемента .name, следующего за .surname */
+}
+
+.custom-heading + .nameAndsur{
+    margin-top: -30px;
+}
+
+.my_cl_img{
+    max-width: 376px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 15px 100px;
+    background: linear-gradient(123deg, #F7B70B 15.48%, #5E6268 89.94%);
+    box-shadow: 8px 4px 25px -10px rgba(247, 183, 11, 0.2);
+    border-radius: 50px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font: 500 18px/18px "Kreadon", sans-serif;
+    color: #fff;
+    text-align: center;
+    border: none; /* Убедитесь, что граница кнопки не отображается */
+    cursor: pointer; /* Добавьте курсор в виде руки, чтобы указать, что элемент является кликабельным */
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 4px 25px -5px rgba(247, 183, 11, 0.4);
+    text-decoration: none;
+}
+
+.custom-description{
+    font-size: 17px;
+}
+
+section {
+    padding-top: 75px;
+}
+
+
+
+
+
+.advocate-profile h1 {
+    color: #FFFFFF; /* Цвет заголовка */
+    font-family: 'Kreadon', medium;
+}
+
+.advocate-profile h2 {
+    color: #FFFFFF; /* Белый цвет текста */
+    font-family: 'Kreadon', sans-serif; /* Подключенный кастомный шрифт */
+    font-weight: 300; /* Вес шрифта 'light' */
+}
+
+.advocate-profile h4 {
+    color: #F7B70B;
+    font-weight: 200; /* Вес шрифта 'light' */
+}
+
+.advocate-profile-h3 + .advocate-profile-h4{
+    margin-top: -10px;
+}
+
+.list-unstyled li {
+    margin-bottom: 15px; /* или любой другой размер отступа, который вам нужен */
+    color: #FFFFFF; /* Белый цвет текста элементов списка */
+    position: relative; /* для позиционирования псевдоэлемента с маркером */
+}
+
+.list-unstyled li::before {
+    content: '•'; /* маркер списка */
+    color: #F7B70B; /* желтый цвет маркера */
+    font-size: 20px; /* размер маркера */
+    position: absolute; /* позволяет позиционировать относительно родителя */
+    left: -1.5em; /* смещаем маркер влево на расстояние одного символа */
+    top: 0; /* смещаем маркер вверх к верхнему краю элемента списка */
+}
+.specialty-link {
+    color: #F7B70B; /* Желтый цвет текста ссылки */
+    text-decoration: none; /* Убираем подчеркивание текста */
+}
+
+.specialty-link:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+
+.advocate-profile p{
+    color: #FFFFFF;
+}
+
+
+.image-container-glow {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Центрирование изображения */
+    overflow: visible; /* Изменено на visible, чтобы позволить свечению выходить за границы */
+    margin: -50px; /* Отрицательный отступ для расширения пространства под свечение */
+    padding: 50px; /* Дополнительное пространство вокруг изображения для свечения */
+}
+
+.image-container-glow::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #FDEDCF;
+    mix-blend-mode: normal;
+    opacity: 0.65;
+    filter: blur(150px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.image-container-glow img {
+    position: relative;
+    z-index: 1;
+    max-width: 100%; /* Убедитесь, что изображение не выходит за границы своего контейнера */
+}
+
+.text-content-glow {
+    margin-top: 20px; /* Отступ сверху, чтобы текст не перекрывался изображением */
+}
+
+
+
+.flip-card {
+    -webkit-transition: -webkit-transform 0.6s;
+    -moz-transition: -moz-transform 0.6s;
+    -o-transition: -o-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+.flip-card-section, .modal-card-section, .map h1 {
+    color: #FFFFFF; /* Цвет заголовка */
+    font-family: 'Kreadon', medium;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 330px; /* Установите ширину карточки */
+    height: 470px; /* Установите высоту карточки */
+    perspective: 1000px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.7s;
+    -webkit-transition: -webkit-transform 0.7s; /* Для Safari и старых версий Chrome */
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d; /* Для Safari и старых версий Chrome */
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); /* Для Safari и старых версий Chrome */
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Для Safari и старых версий Chrome */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front {
+    background-color: #3C3B42;
+    color: black;
+    backface-visibility: hidden;
+}
+
+.skewed-rectangle {
+    content: '';
+    position: absolute;
+    top: 17.5%; /* Расположение по вертикали */
+    left: 50%; /* Расположение по горизонтали */
+    width: 100%; /* Ширина наклонного прямоугольника */
+    height: 105px; /* Высота наклонного прямоугольника */
+    background: #89898B; /* Цвет наклонного прямоугольника */
+    transform: translate(-50%, -50%) skewY(351deg); /* Наклон и центрирование */
+}
+
+.normal-rectangle {
+    content: '';
+    position: absolute;
+    top: 9.3%; /* Расположение по вертикали */
+    left: 50%; /* Расположение по горизонтали */
+    width: 100%; /* Ширина наклонного прямоугольника */
+    height: 80px; /* Высота наклонного прямоугольника */
+    background: #222128; /* Цвет наклонного прямоугольника */
+    transform: translate(-50%, -50%) skewY(0deg); /* Наклон и центрирование */
+}
+
+
+
+.inner-border img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #F7B70B;
+}
+
+.inner-border p {
+    padding: 15px; /* Отступы для текста */
+}
+
+
+.col-xl-4.col-md-6.col-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.square-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.square-card:hover {
+    transform: translateY(-15px);
+}
+
+
+.square-card {
+    width: 300px;
+    height: 300px;
+    background-color: #3C3B42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px auto; /* Добавлено авто для центрирования */
+    border-radius: 5px;
+    position: relative;
+}
+
+.inner-rectangle {
+    width: 270px;
+    height: 270px;
+    border: 2px solid #F7B70B; /* Убедитесь, что учитываете толщину рамки */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Это предотвратит выход изображения за рамки */
+}
+
+.content-wrapper {
+    position: absolute;
+    width: calc(100% - 4px); /* Уменьшаем ширину на двойную толщину рамки */
+    height: calc(100% - 4px); /* Уменьшаем высоту на двойную толщину рамки */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Изменено для корректного распределения пространства */
+}
+
+.inner-title {
+    color: #F7B70B;
+    text-align: center;
+    margin-top: 10px; /* Добавлен отступ сверху */
+}
+
+.inner-image {
+    max-width: 101%; /* Изображение теперь растягивается на всю доступную ширину */
+    object-fit: cover; /* Обеспечивает покрытие всей доступной области без искажения */
+}
+
+
+.modal-card-section h6{
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.custom-modal-content {
+    background-color: #3C3B42; /* Темно-серый фон */
+    color: #ffffff; /* Светло-серый текст */
+}
+
+.custom-modal-header, .custom-modal-footer {
+    border-color: #F7B70B; /* Желтые линии */
+}
+
+.btn-custom {
+    background-color: #F7B70B; /* Желтый фон кнопки */
+    border: none; /* Убрать границу */
+}
+
+.btn-close-white:before {
+    filter: invert(1); /* Белый крестик закрытия */
+}
+
+.custom-modal-body img {
+    border: 3px solid #F7B70B; /* Желтая рамка для изображения */
+}
+
+/* Изменение цвета текста кнопок и ссылок в теле модального окна */
+.custom-modal-body a, .custom-modal-footer .btn-custom {
+    color: #FFFFFF; /* Темно-серый текст для контраста с желтым фоном */
+}
+
+/* Дополнительные стили для кастомизации модального окна */
+.custom-modal-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-text {
+    flex: 1;
+}
+
+.custom-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-ul li {
+    position: relative;
+    padding-left: 30px; /* Увеличьте, если нужно больше места под маркер */
+    margin-bottom: 10px;
+    line-height: 1.5; /* Улучшает читабельность, особенно если текст переносится на новую строку */
+}
+
+.custom-ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(50% - 5px); /* Половина высоты строки минус половина высоты маркера */
+    width: 10px;
+    height: 10px;
+    background-color: #F7B70B;
+    border-radius: 50%;
+}
+
+
+
+.map-link {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 10px;
+    font-family: YS Text, sans-serif;
+    padding: 0 20px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-height: 14px;
+    white-space: nowrap;
+}
+
+
+
+
+
+/* Стили для карты по умолчанию */
+.down_map {
+    width: 100%;
+    height: 480px;
+}
+
+.otzov{
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Медиа-запрос для экранов с максимальной шириной 480px */
+@media (max-width: 480px) {
+    .down_map {
+        height: 250px;
+    }
+    .otzov{
+        height: 250px;
+    }
+}
+
+.footer {
+    color: #fff;
+    margin-top: 20px;
+
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+}
+
+.footer-divider {
+    flex: none; /* Убираем свойства flex, если они были применены */
+    width: 60px; /* Устанавливаем ширину линии */
+    height: 1px; /* Высота линии */
+    border: none; /* Убираем стандартный бордюр */
+    background-color: #F7B70B; /* Цвет линии */
+    opacity: 1; /* Полная непрозрачность */
+}
+
+
+
+
+.footer-logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .footer-col {
+        align-items: center; /* Центрирование на маленьких экранах */
+    }
+
+    .footer-logo {
+        max-width: 70px; /* Уменьшение логотипа на мобильных устройствах */
+    }
+
+    /* Смена порядка элементов на мобильных устройствах */
+    .order-md-1 {
+        order: 2;
+    }
+
+    .order-md-2 {
+        order: 1;
+    }
+
+    .order-md-3 {
+        order: 3;
+    }
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Регулирует расстояние между иконкой и текстом */
+}
+
+.contact-icon {
+    width: 20px; /* Или любой другой размер, который вам нужен */
+    height: auto; /* Сохраняет пропорции иконки */
+}
+
+.footer a {
+    color: #fff; /* Цвет текста, совпадающий с цветом остального текста в подвале */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+.footer a:hover {
+    color: #F7B70B; /* Цвет текста при наведении, можно настроить под ваш дизайн */
+}
+
+
+.map-link {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 10px;
+    font-family: 'YS Text', sans-serif;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-height: 14px;
+    white-space: nowrap;
+}
+
+
+
+
+
+.position-relative {
+    position: relative;
+}
+
+
+.dark-rectangle-overlay {
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    width: 330px;
+    height: 330px;
+    background-color: #3C3B42;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
+
+.inner-rectangle-overlay {
+    width: 90%;
+    height: 90%;
+    border: 2px solid #F7B70B;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Выравнивание по левому краю */
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px; /* Увеличенный отступ для текста, чтобы опустить его ниже */
+}
+
+.inner-rectangle-overlay h5 {
+    color: #FFFFFF; /* Установка белого цвета для заголовка */
+    text-align: center;
+    width: 100%;
+    margin-top: 10px; /* Отступ сверху, чтобы опустить текст ниже */
+    margin-bottom: 20px; /* Увеличение отступа после заголовка для разделения на блоки */
+}
+
+.contact-icon {
+    width: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 14px; /* Уменьшенный размер текста */
+    display: flex;
+    align-items: center; /* Центрирование иконки относительно текста */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.inner-rectangle-overlay {
+    justify-content: flex-start; /* Изменение для поднятия текста выше */
+    padding: 10px; /* Уменьшенный верхний и нижний отступы */
+    overflow: hidden;
+}
+
+/* Адаптация размера и отступов заголовка для поддержания визуальной гармонии */
+.inner-rectangle-overlay h5 {
+    margin-top: 0;
+    margin-bottom: 15px; /* Увеличение отступа после заголовка для разделения на блоки */
+}
+
+
+.footer-divider-overlay {
+    border-top: 1px solid #F7B70B; /* Цвет линии */
+    width: 60px; /* Ширина линии */
+    display: block; /* Гарантирует, что hr ведет себя как блочный элемент */
+    height: 1px; /* Высота линии */
+    background-color: #F7B70B; /* Цвет линии */
+    opacity: 1; /* Полная непрозрачность */
+    margin: 10px auto 20px;
+
+}
+
+.skewed-rectangle-overlay {
+    position: absolute;
+    top: 77%;
+    left: 50%;
+    width: 100%;
+    height: 65px;
+    background: #89898B;
+    transform: translate(-50%, -50%) skewY(357deg);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+}
+
+.social-link {
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    background-size: cover;
+    transition: transform 0.3s ease, background-image 0.3s ease;
+}
+
+.telegram { background-image: url("../img/free-icon-telegram-2111813-2.png"); }
+.vk { background-image: url('../img/free-icon-vk-2111765-2.png'); }
+.whatsapp { background-image: url('../img/free-icon-whatsapp-1384023-2.png'); }
+.viber { background-image: url('../img/free-icon-viber-2582619-2.png'); }
+
+.social-link:hover {
+    transform: scale(1.2);
+}
+
+/* Пути к изображениям при наведении */
+.social-link.telegram:hover { background-image: url('../img/free-icon-telegram-2111813.png'); }
+.social-link.vk:hover { background-image: url('../img/free-icon-vk-2111765.png'); }
+.social-link.whatsapp:hover { background-image: url('../img/free-icon-whatsapp-1384023.png'); }
+.social-link.viber:hover { background-image: url('../img/free-icon-viber-2582619.png'); }
+
+
+
+.dark-rectangle-overlay-2 {
+    display: none;
+    position: relative;
+    width: 330px;
+    height: 330px;
+    background-color: #3C3B42;
+    z-index: 2;
+    left: 50%;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .dark-rectangle-overlay-2 {
+        display: block; /* Блок будет показан */
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        width: 330px;
+        height: 330px;
+        background-color: #3C3B42;
+        z-index: 2;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+
+.animation {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+.cardContainer
+{
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+
+    /*depth of the elements */
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+
+.card
+{
+    background-color: #3C3B42;
+    width: 330px;
+    height: 470px;
+    cursor: pointer;
+
+    /*transition effects */
+    -webkit-transition: -webkit-transform 0.6s;
+    -moz-transition: -moz-transform 0.6s;
+    -o-transition: -o-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.card.flipped
+{
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+.card .front,
+.card .back {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 4em;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.card .back {
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+    line-height: 25px;
+}
+
+.card .back {
+    background: #3C3B42;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+.inner-frame {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    margin: 15px;
+    border: 3px solid #F7B70B;
+    box-sizing: border-box;
+    position: relative; /* Изменено на relative, чтобы относительно него позиционировать текст */
+    background-color: #3C3B42;
+    color: #ffffff;
+    text-align: left;
+    padding: 20px 15px 15px 15px; /* Добавляем padding сверху для отступа текста */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.inner-frame img {
+    position: absolute;
+    top: 0;
+    left: 0; /* Сдвигаем изображение немного правее */
+    width: 90%; /* Уменьшаем ширину, чтобы поддерживать пропорции */
+    height: auto; /* Автоматически регулируем высоту */
+}
+
+.cardTitle {
+    position: absolute;
+    top: 18%; /* Регулируйте это значение для оптимального расположения */
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -15px); /* Смещаем вверх от центра */
+    color: #fff;
+    font-size: 24px; /* Или любой другой размер, который вы предпочитаете */
+    margin: 0;
+}
+
+.inner-frame p {
+    margin-top: 80px;
+    color: #fff; /* Цвет текста */
+    font-size: 16px; /* Размер текста */
+    text-align: left; /* Выравнивание текста */
+    position: relative; /* Убедитесь, что текст не наследует абсолютное позиционирование от .cardTitle */
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: none; /* Убираем подчеркивание */
+}

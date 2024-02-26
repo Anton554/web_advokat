@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Пример сайта с Bootstrap 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=47e5effd-eaa7-44e5-a381-aa4b21ea84eb&lang=ru_RU" type="text/javascript"></script>
+    <link href="/css/styles.css" rel="stylesheet">
+    <script src="/js/scripts.js"></script>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <!-- Логотип и название компании -->
+        <a class="navbar-brand" href="#home-section" style="text-decoration: none">
+            <div class="brand-container">
+                <img src="img/logo.png" alt="Логотип" class="logo">
+                Орловская коллегия<br>адвокатов "Воронежская"
+            </div>
+        </a>
+        <!-- Тумблер для мобильных устройств -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Содержимое бокового (мобильного) меню с прокруткой и фоном -->
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- Пункты меню -->
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home-section">ГЛАВНАЯ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-me-section">ОБО МНЕ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services-section">УСЛУГИ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cooperation-steps-section">ЭТАПЫ СОТРУДНИЧЕСТВА</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts-section">КОНТАКТЫ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<section id="home-section">
+    <div class="container">
+        <div class="row g-4 align-items-end">
+            <div class="col-lg-7 text-container">
+                <h1 class="custom-heading">адвокат</h1>
+                <div class="nameAndsur">
+                    <span class="surname">Бузов</span>
+                    <span class="name">Леонид Леонидович</span>
+                </div>
+                <p class="custom-description">Оказываю полный комплекс юридических услуг.<br>Специализируюсь на делах, связанных с дорожно-транспортными происшествиями.<br>Практикую на всей территории Российской федерации.</p>
+                <a href="tel:+79200849602" class="btn btn-primary">Записаться на консультацию</a>
+            </div>
+            <div class="col-lg-5 d-flex justify-content-center image-container">
+                <img src="/img/leonid1-1.png" alt="Адвокат Бузов Леонид Леонидович" class="img-fluid rounded mx-auto d-block" style="max-width: 400px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="advocate-profile" id="about-me-section">
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-lg-7">
+                <h1 class="text-uppercase">ПОЧЕМУ ИМЕННО Я</h1>
+                <br>
+                <h2 class="advocate-profile-h3 mb-3">Бузов Леонид Леонидович</h2>
+                <h4 class="advocate-profile-h4">Адвокат</h4>
+                <!-- Список достижений -->
+                <ul class="list-unstyled">
+                    <li>В 1996 году очно окончил Орловский юридический институт МВД РФ по специализации «Административно-правовая деятельность ГАИ»</li>
+                    <li>С 2000 года имею статус адвоката</li>
+                    <li>Почти четверть века адвокатской практики именно по делам, связанными с дорожно-транспортными происшествиями</li>
+                    <li>Огромный опыт работы по уголовным делам, связанными с дорожно-транспортными происшествиями, т.е. там, где есть пострадавшие и погибшие</li>
+                    <li>Я являюсь единственным адвокатом в нашем регионе, который кроме высшего юридического образования и обширной юридической практики имеет специальную подготовку по экспертной специальности <a href="/img/Удостоверение.jpg' %}" target="_blank" class="specialty-link">«Исследование обстоятельств дорожно-транспортных происшествий»</a></li>
+                </ul>
+                <a href="tel:+79200849602" class="btn btn-primary">Записаться на консультацию</a>
+            </div>
+            <div class="col-lg-5">
+                <div class="image-container-glow">
+                    <img src="/img/leonid_round.png" alt="Адвокат Бузов Леонид Леонидович" class="img-fluid">
+                </div>
+                <div class="text-content-glow">
+                    <p>Основными принципами моей адвокатской деятельности являются: компетентность, профессионализм и порядочность.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="modal-card-section" id="services-section">
+    <div class="container">
+        <h1 class="text-uppercase">ВИДЫ ЮРИДИЧЕСКОЙ ПОМОЩИ</h1>
+        <br>
+        <div class="row g-5">
+
+            <div class="col-xl-4 col-md-6 col-12">
+                <!-- Квадратная карта -->
+                <div class="square-card" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    <div class="inner-rectangle">
+                        <div class="content-wrapper">
+                            <h6 class="inner-title">Защита по уголовному делу</h6>
+                            <img src="/img/Уголовное%20дело.png" class="inner-image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content custom-modal-content">
+                            <div class="modal-header custom-modal-header justify-content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">Защита по уголовному делу</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body custom-modal-body d-flex justify-content-center">
+                                <div class="modal-text">
+                                    <ul class="custom-ul">
+                                        <li>Консультирование по вопросам, связанным с привлечением к уголовной ответственности в связи с ДТП</li>
+                                        <li>Изучение материалов дела</li>
+                                        <li>Выработка и согласование позиции по подозрению (обвинению) в совершении преступления</li>
+                                        <li>Выезд на место ДТП, помощь в фиксации следов и дорожной обстановки, установлении очевидцев ДТП, участие в составлении документов</li>
+                                        <li>Составление ходатайств, жалоб, заявлений</li>
+                                        <li>Помощь в организации независимой авто-технической и других экспертиз, разработка необходимого перечня вопросов для постановки на разрешение экспертов и специалистов</li>
+                                        <li>Обжалование действий и решений должностных лиц, в том числе в порядке ст.ст. 124, 125 УПК РФ</li>
+                                        <li>Участие во всех следственных действиях, проводимых с участием подзащитного, консультирование по возникающим вопросам, защита прав и законных интересов</li>
+                                        <li>Представительство и защита интересов в судах всех юрисдикций и инстанций</li>
+                                        <li>Обжалование решений суда, как не вступивших, так и вступивших в законную силу</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer custom-modal-footer justify-content-center">
+                                <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6 col-12">
+                <!-- Квадратная карта -->
+                <div class="square-card" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    <div class="inner-rectangle">
+                        <div class="content-wrapper">
+                            <h6 class="inner-title">Представительство интересов в уголовном деле</h6>
+                            <img src="/img/уголовное%20дело2.png" class="inner-image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content custom-modal-content">
+                            <div class="modal-header custom-modal-header justify-content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">Представительство интересов в уголовном деле</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body custom-modal-body d-flex justify-content-center">
+                                <div class="modal-text">
+                                    <ul class="custom-ul">
+                                        <li>Консультирование пострадавших в ДТП и их представителей;</li>
+                                        <li>Изучение материалов дела;</li>
+                                        <li>Выезд на место ДТП, помощь в фиксации следов и дорожной обстановки, установлении очевидцев ДТП, участие в составлении документов;</li>
+                                        <li>Составление ходатайств, жалоб, заявлений;</li>
+                                        <li>Помощь в организации независимых авто-технической, судебно-медицинской и иных экспертиз, разработка необходимого перечня вопросов для постановки на разрешение экспертов и специалистов;</li>
+                                        <li>Обжалование действий и решений должностных лиц, в том числе в порядке ст.ст. 124, 125 УПК РФ;</li>
+                                        <li>Участие во всех следственных действиях, проводимых с участием доверителя;</li>
+                                        <li>Подготовка и обоснование искового заявления в уголовном деле;</li>
+                                        <li>Представительство интересов в судах всех юрисдикций и инстанций;</li>
+                                        <li>Помощь при взыскании судебных расходов;</li>
+                                        <li>Представительство интересов при исполнении решений суда по уголовному делу;</li>
+                                        <li>Обжалование решений суда, как вступивших, так и не вступивших в законную силу;</li>
+                                        <li>Осуществление юридических действий по возбуждению исполнительного производства в ССП, взаимодействие с судебными приставами-исполнителями.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer custom-modal-footer justify-content-center">
+                                <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xl-4 col-md-6 col-12">
+                <!-- Квадратная карта -->
+                <div class="square-card" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                    <div class="inner-rectangle">
+                        <div class="content-wrapper">
+                            <h6 class="inner-title">Юридическая помощь по административным делам</h6>
+                            <img src="/img/административное.png" class="inner-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content custom-modal-content">
+                            <div class="modal-header custom-modal-header justify-content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">Юридическая помощь по административным делам</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body custom-modal-body d-flex justify-content-center">
+                                <div class="modal-text">
+                                    <ul class="custom-ul">
+                                        <li>Консультирование по вопросам, связанным с участием в ДТП или привлечением к административной ответственности;</li>
+                                        <li>Изучение материалов дела;</li>
+                                        <li>Выезд на место ДТП или административного правонарушения, помощь в фиксации следов и дорожной обстановки, установлении очевидцев, участие в составлении документов;</li>
+                                        <li>Обжалование действий (бездействий) сотрудников ГИБДД и иных должностных лиц;</li>
+                                        <li>Помощь в организации независимой авто-технической и иных экспертиз;</li>
+                                        <li>Помощь в поиске свидетелей, специалистов, в добывании иных доказательств по делу;</li>
+                                        <li>Представительство и защита интересов в судах всех юрисдикций и инстанций;</li>
+                                        <li>Представительство интересов при исполнении постановлений по делам об административных правонарушениях;</li>
+                                        <li>Обжалование решений суда, как не вступивших, так и вступивших в законную силу.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer custom-modal-footer justify-content-center">
+                                <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xl-4 col-md-6 col-12">
+                <!-- Квадратная карта -->
+                <div class="square-card" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                    <div class="inner-rectangle">
+                        <div class="content-wrapper">
+                            <h6 class="inner-title">Юридическая помощь по гражданско правовым делам и спорам</h6>
+                            <img src="/img/споры.png" class="inner-image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content custom-modal-content">
+                            <div class="modal-header custom-modal-header justify-content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">Юридическая помощь по административным делам</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body custom-modal-body d-flex justify-content-center">
+                                <div class="modal-text">
+                                    <ul class="custom-ul">
+                                        <li>Взыскание вреда, причиненного жизни и здоровью;</li>
+                                        <li>Взыскание ущерба при дорожно-транспортных происшествиях;</li>
+                                        <li>Взыскание морального вреда;</li>
+                                        <li>Взыскание судебных расходов;</li>
+                                        <li>Взыскание ущерба, причиненного незаконными действиями (бездействием) должностных лиц;</li>
+                                        <li>Споры со страховыми компаниями;</li>
+                                        <li>Претензионное (досудебное) разрешение споров;</li>
+                                        <li>Представительство интересов в судах всех юрисдикций и инстанций;</li>
+                                        <li>Обжалование решений суда, как не вступивших, так и вступивших в законную силу;</li>
+                                        <li>Помощь в наложении ареста на имущество виновника ДТП, ответчика, как средство обеспечения иска;</li>
+                                        <li>Осуществление юридических действий по возбуждению исполнительного производства в ССП, взаимодействие с судебными приставами-исполнителями.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer custom-modal-footer justify-content-center">
+                                <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xl-4 col-md-6 col-12">
+                <!-- Квадратная карта -->
+                <div class="square-card" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                    <div class="inner-rectangle">
+                        <div class="content-wrapper">
+                            <h6 class="inner-title">Помощь в получении страховых выплат</h6>
+                            <img src="/img/выплаты.png" class="inner-image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content custom-modal-content">
+                            <div class="modal-header custom-modal-header justify-content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">Помощь в получении страховых выплат</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body custom-modal-body d-flex justify-content-center">
+                                <div class="modal-text">
+                                    <ul class="custom-ul">
+                                        <li>Консультирование по вопросам обязательного страхования автогражданской ответственности и страхования транспортных средств;</li>
+                                        <li>Помощь в заполнении извещения о страховом случае (европротокола);</li>
+                                        <li>Помощь в составлении заявления о страховой выплате;</li>
+                                        <li>Представительство интересов на досудебной (претензионной) стадии разрешения споров;</li>
+                                        <li>Представительство интересов, как в самих страховых компаниях, у финансового уполномоченного, так и в судах всех юрисдикций и инстанций;</li>
+                                        <li>Помощь в организации независимых авто-технической и судебно-медицинской экспертиз.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer custom-modal-footer justify-content-center">
+                                <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6 col-12">
+                <!-- Квадратная карта -->
+                <div class="square-card" data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                    <div class="inner-rectangle">
+                        <div class="content-wrapper">
+                            <h6 class="inner-title">Иная юридическая помощь</h6>
+                            <img src="/img/иная.png" class="inner-image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content custom-modal-content">
+                            <div class="modal-header custom-modal-header justify-content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">Иная юридическая помощь</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body custom-modal-body d-flex justify-content-center">
+                                <div class="modal-text">
+                                    <h5>Я и мои помощники, также оказываем всестороннюю юридическую помощь:</h5>
+                                    <ul class="custom-ul">
+                                        <li>По защите прав потребителей;</li>
+                                        <li>По трудовым спорам;</li>
+                                        <li>По жилищным, земельным, семейным, наследственным делам и спорам;</li>
+                                        <li>По снятию ареста с имущества;</li>
+                                        <li>По делам особого производства: установление фактов, имеющих юридическое значение, усыновление ребенка, признание гражданина безвестно отсутствующим или об объявлении его умершим, ограничение дееспособности гражданина, признание его недееспособным, восстановление прав по утраченным ценным бумагам, внесение исправлений в записи актов гражданского состояния и другие;</li>
+                                        <li>По оспариванию нормативно-правовых актов, а также решений и действий (бездействий) государственных органов и должностных лиц;</li>
+                                        <li>По иным делам и спорам.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer custom-modal-footer justify-content-center">
+                                <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <a href="tel:+79200849602" class="btn btn-primary">Записаться на консультацию</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="flip-card-section" id="cooperation-steps-section">
+    <div class="container">
+        <h1 class="text-uppercase">ЭТАПЫ СОТРУДНИЧЕСТВА</h1>
+        <br>
+        <div class="row g-5">
+
+            <div class="col-xl-4 col-md-6 col-12 cardContainer">
+                <div class="card">
+                    <div class="front">
+                        <div class="inner-frame">
+                            <img src="/img/звонок.png" alt="Front" style="width:100%;height:100%;">
+                            <div class="normal-rectangle"></div>
+                            <div class="skewed-rectangle"></div>
+                            <h3 class="cardTitle">Звонок</h3>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner-frame">
+                            <div class="content">
+                                <h3 class="cardTitle">Звонок</h3>
+                                <br/>
+                                <p>Чем раньше с момента события, ставшего для Вас проблемой, Вы свяжетесь со мной, тем быстрее и эффективней будет моя помощь, с наилучшим результатом и минимальными финансовыми потерями для Вас.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-4 col-md-6 col-12 cardContainer">
+                <div class="card">
+                    <div class="front">
+                        <div class="inner-frame">
+                            <img src="/img/звонок2.png" alt="Front" style="width:100%;height:100%;">
+                            <div class="normal-rectangle"></div>
+                            <div class="skewed-rectangle"></div>
+                            <h3 class="cardTitle">Беседа</h3>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner-frame">
+                            <div class="content">
+                                <h3 class="cardTitle">Беседа</h3>
+                                <br/>
+                                <p>На этом этапе, как правило, происходит наше очное знакомство. Чем подробнее и полнее Вы расскажете о своей проблеме, тем больше будет шансов у нас с ней справиться. Мне будет намного проще вникнуть с суть дела, если Вы сможете предоставить какие-либо документы, фотоизображения или видео.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-4 col-md-6 col-12 cardContainer">
+                <div class="card">
+                    <div class="front">
+                        <div class="inner-frame">
+                            <img src="/img/соглашение.png" alt="Front" style="width:100%;height:100%;">
+                            <div class="normal-rectangle"></div>
+                            <div class="skewed-rectangle"></div>
+                            <h3 class="cardTitle" style="top: 15.5%">Заключение соглашения</h3>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner-frame">
+                            <div class="content">
+                                <h3 class="cardTitle" style="top: 15.5%">Заключение соглашения</h3>
+                                <br/>
+                                <p>Соглашение (договор оказания юридических услуг) - документальное оформление нашего сотрудничества, с обсуждением и закреплением на бумажном носителе прав и обязанностей сторон. Соглашение составляется в двух экземплярах, оба подписываются мною и Вами, один остается у меня, другой у Вас.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-4 col-md-6 col-12 cardContainer">
+                <div class="card">
+                    <div class="front">
+                        <div class="inner-frame">
+                            <img src="/img/позиции.png" alt="Front" style="width:100%;height:100%;">
+                            <div class="normal-rectangle"></div>
+                            <div class="skewed-rectangle"></div>
+                            <h3 class="cardTitle" style="top: 15.5%">Выработка<br>позиции</h3>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner-frame">
+                            <div class="content">
+                                <h3 class="cardTitle" style="top: 15.5%">Выработка<br>позиции</h3>
+                                <br/>
+                                <p>Этот ключевой этап сотрудничества определяет дальнейшие события и результат. На этом этапе необходимо решить такие вопросы, как: признавать вину, исковые требования или нет, определить объем и суть своих требований, жалоб, подумать о том, какие доказательства можно и нужно использовать для достижения необходимого результата, как и где их добыть</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-4 col-md-6 col-12 cardContainer">
+                <div class="card">
+                    <div class="front">
+                        <div class="inner-frame">
+                            <img src="/img/стратегии.png" alt="Front" style="width:100%;height:100%;">
+                            <div class="normal-rectangle"></div>
+                            <div class="skewed-rectangle"></div>
+                            <h3 class="cardTitle" style="top: 15.5%">Определение стратегии</h3>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner-frame">
+                            <div class="content">
+                                <h3 class="cardTitle" style="top: 15.5%">Определение стратегии</h3>
+                                <br/>
+                                <p>Это определение методов и способов достижения нужного результата. Необходимо решить, что нужно сделать в первую очередь и что делать в дальнейшем. По возможности необходимо предусмотреть действия, которые могут предпринять оппоненты и быть готовым к различным вариантам развития событий.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-4 col-md-6 col-12 cardContainer">
+                <div class="card">
+                    <div class="front">
+                        <div class="inner-frame">
+                            <img src="/img/работа.png" alt="Front" style="width:100%;height:100%;">
+                            <div class="normal-rectangle"></div>
+                            <div class="skewed-rectangle"></div>
+                            <h3 class="cardTitle">Работа</h3>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner-frame">
+                            <div class="content">
+                                <h3 class="cardTitle">Работа</h3>
+                                <br/>
+                                <p>Работа адвоката по любому делу, это весьма многогранная, непростая, но очень интересная деятельность, затрагивающая многие отрасли права и сферы жизнедеятельности человека, итогом которой должно стать достижение необходимого для Вас результата.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <br>
+                <a href="tel:+79200849602" class="btn btn-primary">Записаться на консультацию</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map custom-map-padding" id="contacts-section">
+    <div class="container">
+        <h1 class="text-uppercase">КОНТАКТЫ</h1>
+        <br>
+        <div class="row g-0">
+            <div class="col-lg-8 position-relative">
+                <div class="down_map" id="map"></div>
+                <div class="dark-rectangle-overlay d-none d-md-block">
+                    <div class="inner-rectangle-overlay">
+                        <h5 style="margin-bottom: 0px;">КАК СВЯЗАТЬСЯ</h5>
+                        <hr class="footer-divider-overlay">
+                        <p><a href="tel:+79202829991"><img src="/img/free-icon-phone-call-5400769-2.png" alt="Phone Icon" class="contact-icon"> +79202829991</a></p>
+                        <p><a href="mailto:leonbx5@mail.ru"><img src="/img/free-icon-close-envelope-70293-2.png" alt="Email Icon" class="contact-icon"> leonbx5@mail.ru</a></p>
+                        <p><a href="https://yandex.ru/maps/?text=г. Орёл, ул. Гуртьева, д. 10, офис 2" target="_blank"><img src="/img/free-icon-location-pin-1201684-2.png" alt="Location Icon" class="contact-icon"> г. Орёл, ул. Гуртьева, д. 10, офис 2</a></p>
+                        <div class="skewed-rectangle-overlay">
+                            <div class="icons-container">
+                                <a href="https://t.me/yourusername" target="_blank" class="social-link telegram"></a>
+                                <a href="https://vk.com/yourusername" target="_blank" class="social-link vk"></a>
+                                <a href="https://wa.me/yourphonenumber" target="_blank" class="social-link whatsapp"></a>
+                                <a href="viber://chat?number=yourphonenumber" target="_blank" class="social-link viber"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Блок для виджета отзывов -->
+            <div class="col-lg-4">
+                <div class="otzov">
+                    <iframe style="width: 100%; height: 100%; border: none; box-sizing: border-box" src="https://yandex.ru/maps-reviews-widget/1354208342?comments"></iframe>
+                    <a href="https://yandex.ru/maps/org/advokat_buzov_l_l_/1354208342/" target="_blank" class="map-link">Адвокат Бузов Л.Л. на карте Орла — Яндекс Карты</a>
+                </div>
+            </div>
+            <div class="col-12 dark-rectangle-overlay-2">
+                <div class="inner-rectangle-overlay">
+                    <h5 style="margin-bottom: 0px;">КАК СВЯЗАТЬСЯ</h5>
+                    <hr class="footer-divider-overlay">
+                    <p><a href="tel:+79202829991" style="text-decoration: none;"><img src="/img/free-icon-phone-call-5400769-2.png" alt="Phone Icon" class="contact-icon"> +79202829991</a></p>
+                    <p><a href="mailto:leonbx5@mail.ru"><img src="/img/free-icon-close-envelope-70293-2.png" alt="Email Icon" class="contact-icon"> leonbx5@mail.ru</a></p>
+                    <p><a href="https://yandex.ru/maps/?text=г. Орёл, ул. Гуртьева, д. 10, офис 2" target="_blank"><img src="/img/free-icon-location-pin-1201684-2.png" alt="Location Icon" class="contact-icon"> г. Орёл, ул. Гуртьева, д. 10, офис 2</a></p>
+                    <div class="skewed-rectangle-overlay">
+                        <div class="icons-container">
+                            <a href="https://t.me/yourusername" target="_blank" class="social-link telegram"></a>
+                            <a href="https://vk.com/yourusername" target="_blank" class="social-link vk"></a>
+                            <a href="https://wa.me/yourphonenumber" target="_blank" class="social-link whatsapp"></a>
+                            <a href="viber://chat?number=yourphonenumber" target="_blank" class="social-link viber"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center py-3">
+                <a href="tel:+79200849602" class="btn btn-primary">Связаться срочно</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer text-white">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <div class="col-12 col-md-4 footer-col text-center mb-md-0 order-md-2" style="align-items: center;">
+                <img src="/img/logo.png" alt="Логотип" class="footer-logo">
+            </div>
+            <div class="col-12 col-md-4 footer-col mb-md-0 order-md-1">
+                <p style="margin-bottom: 10px;">Адвокат Орловской коллегии адвокатов "Воронежская"<br>БУЗОВ Л.Л.</p>
+                <hr class="footer-divider" style="margin-top: 0px;">
+                <p>Регистрационный номер в реестре: 57/321</p>
+            </div>
+            <div class="col-12 col-md-4 footer-col contact-info order-md-3">
+                <p><a href="tel:+79200849602"><img src="/img/free-icon-phone-call-5400769-2.png" alt="Phone Icon" class="contact-icon"> +79200849602</a></p>
+                <p><a href="mailto:leonbx5@mail.ru"><img src="/img/free-icon-close-envelope-70293-2.png" alt="Email Icon" class="contact-icon"> leonbx5@mail.ru</a></p>
+                <p><a href="https://yandex.ru/maps/?text=г. Орёл, ул. Гуртьева, д. 10, офис 2" target="_blank"><img src="/img/free-icon-location-pin-1201684-2.png" alt="Location Icon" class="contact-icon"> г. Орёл, ул. Гуртьева, д. 10, офис 2</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
